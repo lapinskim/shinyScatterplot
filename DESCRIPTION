@@ -1,0 +1,29 @@
+Package: shinyScatterplot
+Type: Package
+Title: Polysome Association Dynamics Plotting
+Version: 0.1.2
+Author: Maciej Łapiński
+Maintainer: Maciej Łapiński <lapinski.maciej@gmail.com>
+Description: Recreation of Figure 2. published in Cytoplasmic 
+    polyadenylation-mediated translational control of maternal mRNAs directs
+    maternal to zygotic transition Winata CL et al., Development, 11 December
+    2017. Interactive plot produced in Shiny.
+Depends: R (>= 3.5.0)
+Imports:
+    dplyr (>= 0.7.6),
+    ggplot2 (>= 3.0.0),
+    ggthemes (>= 4.0.0),
+    ggExtra (>= 0.8),
+    RColorBrewer (>= 1.1.2),
+    colourpicker (>= 1.0),
+    shiny (>= 1.1.0),
+    magrittr (>= 1.5),
+    rlang (>= 0.2.1)
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
