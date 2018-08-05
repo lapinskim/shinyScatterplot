@@ -44,7 +44,7 @@ getRTvsRB_FPKM <- function(stage,
             FUN = function(x) {
                 all(x > cutoff)
             }
-        ),]
+        ), ]
 
     # print the number of genes after cutoff
     cat(sprintf(
@@ -65,7 +65,7 @@ getRTvsRB_FPKM <- function(stage,
             FUN = function(x) {
                 any(x == 0)
             }
-        ),]
+        ), ]
     cat(sprintf(
         'Without genes with 0 counts in bound fraction: %i\n',
         dim(boundStageVSEgg_Cut)[1]
@@ -82,13 +82,13 @@ getRTvsRB_FPKM <- function(stage,
             FUN = function(x) {
                 any(x == 0)
             }
-        ),]
+        ), ]
     # subset those genes from the final total counts and bound counts
     totalStageVSEgg_Cut <-
         totalCounts[rownames(unboundStageVSEgg_Cut),
                     grep(pat, colnames(totalCounts))]
     boundStageVSEgg_Cut <-
-        boundStageVSEgg_Cut[rownames(unboundStageVSEgg_Cut),]
+        boundStageVSEgg_Cut[rownames(unboundStageVSEgg_Cut), ]
     # print the number of genes
     cat(sprintf(
         'Without genes with 0 in bound and unbound fraction: %i\n',
@@ -159,6 +159,10 @@ getRTvsRB_FPKM <- function(stage,
 #' @return A processed data frame
 #'
 #' @keywords internal
+#'
+#' @importFrom dplyr filter arrange desc mutate
+#' @importFrom magrittr %>%
+#' @importFrom rlang .data
 prepare_data <- function(data, xlim, ylim, title) {
     # Filter only maternal genes
     data_m <-
@@ -195,11 +199,9 @@ prepare_data <- function(data, xlim, ylim, title) {
 #'
 #' @return A ggplot2 plot object.
 #'
-#' @export
-#' @importFrom dplyr filter arrange desc mutate
-#' @importFrom magrittr %>%
 #' @import ggplot2
-#' @importFrom rlang .data
+#'
+#' @export
 plotLogMat <- function(data,
                        xlim = c(-5, 5),
                        ylim = c(-5, 5),
