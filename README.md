@@ -3,6 +3,8 @@
 
 # shinyScatterplot
 
+Recreation of the scatterplot from:
+
 <center>
 
 ![Figure 2](inst/img/figure2.png)
