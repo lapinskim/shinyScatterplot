@@ -3,6 +3,9 @@
 
 # shinyScatterplot
 
+[![Travis-CI Build
+Status](https://travis-ci.org/lapinskim/shinyScatterplot.svg?branch=master)](https://travis-ci.org/lapinskim/shinyScatterplot)
+
 Recreation of the scatterplot from:
 
 <center>
